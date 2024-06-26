@@ -1,9 +1,9 @@
+import java.util.Arrays;
+
 class Solution {
     public int[] solution(int[] numbers) {
-        for(int i=0; i<numbers.length; i++) {
-            numbers[i] *= 2;
-        }
-        
-        return numbers;
+        return Arrays.stream(numbers)
+                     .map(n -> n * 2)
+                     .toArray();
     }
 }
